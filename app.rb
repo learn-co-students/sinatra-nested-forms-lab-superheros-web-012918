@@ -1,11 +1,8 @@
-require 'sinatra/base'
+require '.environment'
 
 class App < Sinatra::Base
 
-    set :views, Proc.new { File.join(root, "../views/") }
-
-
-    get '/' do
+  get '/' do
     erb :super_hero
   end
 
@@ -23,7 +20,6 @@ class App < Sinatra::Base
     end
 
     erb :team
-
-    end
+  end
 
 end
